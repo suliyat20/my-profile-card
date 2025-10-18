@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio Card</title>
+</head>
+<body>
+    <article data-testid="test-profile-card" class="test-profile-card">
+      <header>
+        <h2 data-testid="test-user-name">Suliyat Ajadi</h2>
+      </header>
+      <figure>
+          <img src="images/temmey2.jpg"
+          data-testid="test-user-avatar">
+      </figure>
+      <p data-testid="test-user-bio">
+        A passionate frontend developer in training, eager to create accessible and beautiful web experiences.
+      </p>
+      <section>
+        <h3>Current Time (ms)</h3>
+        <p data-testid="test-user-time" id="CurrentTime"></p>
+      </section>
+      <nav data-testid="test-user-social-links" class="social-links">
+        <ul>
+          <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">Github</a></li>
+          <li><a href="https://linkedIn.com" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a></li>
+
+        </ul>
+      </nav>
+
+      <section data-testid="test-user-hobbies">
+        <h3>Hobbies</h3>
+        <ul>
+          <li>Coding</li>
+          <li>Reading tech blogs</li>
+          <li>Designing layouts</li>
+        </ul>
+      </section>
+      <section data-testid="test-user-dislikes">
+        <h3>Dislikes</h3>
+        <ul>
+          <li>Procastination</li>
+          <li>Bad internet</li>
+          <li>Messy code</li>
+        </ul>
+      </section>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
