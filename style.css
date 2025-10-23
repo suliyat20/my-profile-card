@@ -7,31 +7,251 @@ body{
   height: 100vh;
   margin: 0;
 }
-.profile-card{
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  max-width: 400px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
+
+
+/* ---------------------------
+   Global Styles
+----------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-img{
-  width: 120px;
-  height: 120px;
+
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container for all pages */
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 40px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* ---------------------------
+   Profile Card Page
+----------------------------*/
+
+
+
+figure img[data-testid="test-user-avatar"] {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
 }
-.social-links ul{
-  list-style: none;
-  padding: 0;
+
+figure img:hover {
+  transform: scale(1.05);
+}
+
+[data-testid="test-user-name"] {
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+
+[data-testid="test-user-bio"] {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+[data-testid="test-user-time"] {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Social Links */
+[data-testid="test-user-social-links"] {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
-.social-links a{
+
+[data-testid="test-user-social-links"] a {
+  color: #0077ff;
   text-decoration: none;
-  color: #0077cc;
+  transition: color 0.3s;
 }
+
+[data-testid="test-user-social-links"] a:hover {
+  color: #0056b3;
+}
+
+/* Lists */
+section {
+  margin-bottom: 20px;
+}
+
+
+/* ---------------------------
+   Contact Us Page
+----------------------------*/
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #0077ff;
+  outline: none;
+}
+
+button {
+  background: #0077ff;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: #28a745;
+  font-weight: 600;
+}
+/* ---------------------------
+  Navigation Bar
+----------------------------*/
+nav {
+  color: blue;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+
+/* Navigation Links */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav  a {
+  
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #0077ff;
+  border-bottom: 2px solid #0077ff;
+}
+
+
+/* ---------------------------
+   About Me Page
+----------------------------*/
+main[data-testid="test-about-page"]{
+  margin-top: 10%;
+}
+main[data-testid="test-about-page"] section {
+  background: #f9fafc;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+main[data-testid="test-about-page"] h2 {
+  color: #0077ff;
+}
+
+/* ---------------------------
+   Responsive Design
+----------------------------*/
+@media (min-width: 768px) {
+  article[data-testid="test-profile-card"] {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  figure img {
+    width: 180px;
+    height: 180px;
+  }
+
+  [data-testid="test-user-bio"] {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
+
 @media (min-width: 700px){
   .profile-card{
     display: flex;
@@ -43,4 +263,28 @@ img{
     flex: 1;
   }
 }
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+  }
+}
+
+
   
