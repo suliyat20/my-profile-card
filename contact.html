@@ -16,31 +16,36 @@
 
   <main>
     <h1>Contact Us</h1>
-    <form id="contact form" data-testid="test-contact-form" novalidate>
-      <div>
-        <label for="name">Full name</label>
-        <input type="text" id="name" data-testid="test-contact-name">
-        <small id="error-name" data-testid="test-contact-error-name" class="error"></small>
-      </div>
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" data-testid="test-contact-email">
-        <small id="error-email" data-testid="test-contact-error-email" class="error"></small>
-      </div>
-        <div>
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" data-testid="text-contact-subject">
-        <small id="subject" data-testid="test-contact-error-subject" class="error"></small>
-        </div>
-        <div>
-        <label for="message">Message</label>
-        <textarea id="message" rows="4" data-testid="text-contact-message"></textarea>
-        <small id="message" data-testid="test-contact-error-message" class="error"></small>
-        </div>
-        <button type="submit" data-testid="text-contact-submit">Submit</button>
-        <p id="sucessMessage" data-testid="test-contact-sucess" class="sucess"></p>
-    </form>
-  </main>
+    <form id="contactForm" data-testid="test-contact-form" novalidate>
+<div>
+<label for="name">Full Name:</label>
+<input type="text" id="name" data-testid="test-contact-name">
+<small id="error-name" data-testid="test-contact-error-name" class="error"></small>
+</div>
+
+<div>
+<label for="email">Email:</label>
+<input type="email" id="email" data-testid="test-contact-email">
+<small id="error-email" data-testid="test-contact-error-email" class="error"></small>
+</div>
+
+<div>
+<label for="subject">Subject:</label>
+<input type="text" id="subject" data-testid="test-contact-subject">
+<small id="error-subject" data-testid="test-contact-error-subject" class="error"></small>
+</div>
+
+<div>
+<label for="message">Message:</label>
+<textarea id="message" rows="4" data-testid="test-contact-message"></textarea>
+<small id="error-message" data-testid="test-contact-error-message" class="error"></small>
+</div>
+
+<button type="submit" data-testid="test-contact-submit">Submit</button>
+<p id="successMessage" data-testid="test-contact-success" class="success"></p>
+</form>
+</main>
+
   <script src="script.js"></script>
   
 </body>
